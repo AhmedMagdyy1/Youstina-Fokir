@@ -1,0 +1,474 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.active {
+  color: #ff305b !important;
+}
+
+.section-title h2 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 40px;
+  font-weight: 800;
+}
+.section-title h2:after,
+.section-title h2:before {
+  content: "";
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+}
+.section-title h2:before {
+  border-color: #ff305b;
+  border-style: solid;
+  border-width: 1px 0;
+  width: 70px;
+  padding: 4px 0 5px;
+  bottom: 0;
+}
+.section-title h2:after {
+  bottom: 5px;
+  background-color: #ff305b;
+  height: 1px;
+  width: 160px;
+}
+
+.header {
+  overflow: auto;
+  height: 100vh;
+  background-image: url("images/hero\ img.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.header .overlay {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header .header-navBar {
+  background: #333;
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.header .header-navBar .logo a {
+  color: #ff305b;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 0;
+}
+.header .header-navBar .navMenu ul {
+  display: flex;
+  margin: 0;
+}
+
+.header .header-navBar .navMenu ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 18px 10px;
+}
+
+.header .headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  height: 90vh;
+}
+.header .headerContent h1 {
+  color: #ff305b;
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header .headerContent h3 {
+  font-weight: 400;
+}
+.header .headerContent h4 {
+  font-size: 26px;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+/* about section */
+.about {
+  margin: 70px 0;
+}
+.about .boxImg {
+  margin-left: 8.33%;
+}
+.about .borderImg {
+  border-radius: 5px;
+  box-shadow: 0 0 0 8px #555555 inset;
+  display: block;
+  margin-right: 0;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 100px;
+}
+.about .borderImg .profile-photo {
+  transform: translate(24px, 24px);
+  overflow: hidden;
+}
+
+.about .borderImg .profile-photo img {
+  border-radius: 5px;
+  width: 100%;
+}
+.about .borderImg .profile-photo:hover .overlay {
+  top: 0;
+}
+.about .borderImg .profile-photo .overlay {
+  position: absolute;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.57);
+  top: 105%;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+}
+.about .borderImg .profile-photo .overlay .socialIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about .borderImg .profile-photo .overlay .socialIcon ul li {
+  display: inline-block;
+}
+.about .borderImg .profile-photo .overlay .socialIcon ul li a {
+  padding: 10px;
+  color: #fff;
+}
+.about .borderImg .profile-photo .overlay .socialIcon ul li a:hover {
+  color: #ff305b;
+}
+
+.about .profile-content {
+  padding-left: 70px;
+}
+
+.about .profile-content h2 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 25px;
+  padding-left: 13px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.about .profile-content h2:after {
+  content: "";
+  background: #ff305b;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+.about .profile-content p {
+  border-bottom: 1px dashed #999999;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.about .profile-content ul li {
+  color: #555555;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.about .profile-content ul li:nth-child(2n + 1) {
+  float: left;
+  width: 50%;
+}
+
+.about .profile-content ul li span {
+  color: #333333;
+  font-weight: 600;
+}
+
+.about .profile-content a {
+  background: #ff305b;
+  border-radius: 4px;
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 24px;
+  transition: all 0.3s ease-in-out;
+}
+.about .profile-content a:hover {
+  background: #ec2403;
+}
+
+/* services Section*/
+.services .content {
+  text-align: center;
+  margin: 50px 0;
+}
+.services .content .serviceContent {
+  padding: 40px 15px;
+  transition: all 0.5s;
+}
+.services .content .serviceContent:hover {
+  background: #ffffff;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.services .content .serviceContent i {
+  color: #ff305b;
+  padding: 10px;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+.services .content .serviceContent:hover i {
+  transform: scale(1.2);
+}
+.services .content .serviceContent p {
+  color: #555555;
+}
+.portfolioBtn li {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3px 12px;
+  text-transform: uppercase;
+}
+
+.portfolioImg .overlayImg {
+  position: relative;
+  margin: 10px;
+}
+.portfolioImg img {
+  width: 100%;
+}
+.portfolioImg .overlayImg:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.429);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.portfolioImg .overlayImg:hover::after {
+  opacity: 1;
+}
+
+.counter i {
+  color: #ff305b;
+  font-size: 26px;
+}
+.counter h5 {
+  color: #555555;
+  font-size: 15px;
+}
+
+.feedback .card {
+  width: 70%;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: f1f1f1;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.feedback .card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+}
+.feedback .card span {
+  color: rgb(119, 119, 119);
+  font-size: 15px;
+  display: inline-block;
+}
+.feedback .card p {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+}
+.feedback .card .star {
+  color: rgb(241, 195, 13);
+}
+
+.feedback .card .box {
+  height: 300px;
+  width: 300px;
+  background-color: #ff305b;
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  transform: rotate(45deg);
+}
+
+.blog .blogContent {
+  background-color: #fff;
+  margin: 5px;
+}
+.blog .blogContent img {
+  width: 100%;
+}
+
+.blog .blogContent .postContent p {
+  color: #333;
+  margin: 10px 0;
+}
+.blog .blogContent .postContent a {
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+.blog .blogContent .postContent a:hover {
+  color: #ff305b;
+}
+
+.contactForm {
+  width: 700px;
+  margin: 40px auto;
+}
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  margin: 6px 0;
+  outline: none;
+}
+.contactForm textarea {
+  resize: none;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border: 1px solid #ff305b;
+}
+.contactForm button {
+  background-color: #ff305b;
+  border-color: #ff305b;
+  color: #ffffff;
+  padding: 0 20px;
+  height: 40px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.contactForm button:hover {
+  background-color: #ec2403;
+  border-color: #ec2403;
+  color: #ccc;
+}
+.footer {
+  background-color: #333;
+}
+.footer .socialIcon ul li{
+  display: inline-block;
+}
+.footer .socialIcon ul li a{
+  padding: 10px;
+  color: #fff;
+}
+.footer .socialIcon ul li a:hover ,.footer p span{
+  color: #ff305b;
+}
+.footer p{
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+
+.typewriter-text {
+  font-size: 24px;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflowing text */
+  border-right: 2px solid black; /* Simulate the blinking cursor */
+  animation: typing 2s steps(15, end) infinite, blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width:80%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@media (max-width:992px){
+  .header .header-navBar .navMenu ul{
+    display: flex;
+    flex-direction: column;
+    align-items:center
+  }
+  .header .header-navBar .logo {
+    text-align: center;
+  }
+}
